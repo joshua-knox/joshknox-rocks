@@ -71,16 +71,14 @@ main {
 
 .c {
     background-color: rgb(219, 155, 216);
-    background-image: url('computer.png');
+    background-image: url('images/c.png');
     color: tan;
-    
 }
 
 .o {
     background-color: rgb(224, 97, 150); 
-    background-image: url('computer guy.jpg');
+    background-image: url('images/o.png');
     color: tan;
-    
 }
 
 @media (orientation: portrait) {
@@ -89,24 +87,18 @@ main {
     }
 }
 
-
-
-
 .d { 
     background-color: rgb(106, 106, 253); 
-    background-image: url('computer phone.jpg');
+    background-image: url('images/d.png');
     background-position-x: 75%;
     background-position-y: 50%;
     color: tan;
-    
-    
 }
 
 .e {
     background-color: rgb(0, 217, 255);
-    background-image: url('guy chair.jpg');
+    background-image: url('images/e.png');
     color: tan; 
-
 }
 
 @media (orientation: portrait) {
