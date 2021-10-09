@@ -1,11 +1,16 @@
 {
   "name": "joshknox-rocks",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "My website",
+  "main": "public/behavior.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server",
+    "deploy": "firebase deploy"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "http-server": "latest",
+    "firebase-cli": "latest"
+  },
+  "author": "Joshua Knox",
+  "license": "MIT"
 }
