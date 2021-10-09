@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background: blue;
+    background: violet;
     color: white;
     display: flex;
     justify-content: flex-start;
@@ -19,6 +19,13 @@ header {
     gap: 1em;
     font-size: 24px;
 }
+
+@media (orientation: portrait) {
+    header  {
+        justify-content: center;
+    }
+}
+
 main {
     height: 100%;
 }
@@ -76,6 +83,15 @@ main {
     
 }
 
+@media (orientation: portrait) {
+    .o {
+        background-position: center 30%;
+    }
+}
+
+
+
+
 .d { 
     background-color: rgb(106, 106, 253); 
     background-image: url('computer phone.jpg');
@@ -91,4 +107,10 @@ main {
     background-image: url('guy chair.jpg');
     color: tan; 
 
+}
+
+@media (orientation: portrait) {
+    .e {
+        background-position: center 20%;
+    }
 }
