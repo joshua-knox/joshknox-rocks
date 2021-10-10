@@ -1,0 +1,16 @@
+window.console.log(window)
+window.console.log(window.document)
+window.console.log(window.document.documentElement)
+window.console.log(window.document.body)
+
+const headerElement = window.document.querySelector("header")
+const itemElementC = window.document.querySelector(".c")
+const itemElementO = window.document.querySelector(".o")
+const itemElementD = window.document.querySelector(".d")
+const itemElementE = window.document.querySelector(".e")
+
+window.console.log(headerElement)
+window.console.log(itemElementC)
+window.console.log(itemElementO)
+window.console.log(itemElementD)
+window.console.log(itemElementE)
