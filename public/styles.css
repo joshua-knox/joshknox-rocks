@@ -8,6 +8,7 @@ body {
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
+
 }
 
 header {
@@ -100,4 +101,11 @@ main {
     .e {
         background-position: center 20%;
     }
+
 }
+.project-link {
+    font-size: 30px
+}
+
+
+    
