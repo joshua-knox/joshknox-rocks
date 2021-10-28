@@ -1,0 +1,19 @@
+body {
+    background: tan
+}
+
+ nav {
+     display: flex;
+    flex-direction: column
+ }
+
+.content {
+    display: flex;
+    gap: 50px;
+    border: 10px solid red;
+ }
+
+ .everything {
+    border: 10px solid green;
+
+ }

@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+div {
+    display: flex;
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #ad4b26;
+    border-radius: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 20%;
+}
+
+header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 48px;
+}
+
+.section1 img {
+    width: 50%;
+}
+
+.section1-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.breed-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.breeds {
+    display: flex;
+    justify-content: space-between;
+}
+
+.breed {
+    display: flex;
+    flex-direction: column;
+}
+
+.breed-content img {
+    max-width: 50%;
+}

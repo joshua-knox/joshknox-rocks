@@ -1,0 +1,17 @@
+
+body {
+    background-color: black
+}
+.outer {
+    background-color: lightgray;
+
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    
+}
+.chairs2 {
+    height: 250px;
+    width:  150px;
+}
