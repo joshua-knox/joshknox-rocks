@@ -1,0 +1,22 @@
+body {
+    background: forestgreen;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    font-size: 18px;
+}
+
+img {
+    max-width: 5%;
+}
+
+form {
+    display: flex;
+    justify-content: space-evenly;
+}
+button {
+    Search
+}

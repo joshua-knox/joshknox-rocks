@@ -1,14 +1,14 @@
-html,
-body {
-    height: 100%;
-}
-
 body {
     margin: 0;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
 
+}
+
+img {
+    max-width: 100%;
+    border: 1px solid black;
 }
 
 header {
@@ -23,7 +23,28 @@ header {
 }
 
 main {
-    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px;
+    justify-content: center;
+}
+
+a {
+    width: 100%;
+    box-shadow: 0 0 3px 3px gray;
+    padding: 25px;
+}
+
+@media (min-width: 480px) {
+    a {
+        width: 250px;
+    }   
+}
+
+a:hover {
+    background-color: violet;
+    color: black;
 }
 
 .container {
