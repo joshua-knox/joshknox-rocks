@@ -7,6 +7,7 @@ nav {
     justify-content: space-between;
     justify-content: space-evenly;
     font-size: 18px;
+    box-sizing: border-box;
 }
 
 img {
@@ -16,6 +17,8 @@ img {
 form {
     display: flex;
     justify-content: space-evenly;
+    justify-content: center;
+  
 }
 button {
     Search
