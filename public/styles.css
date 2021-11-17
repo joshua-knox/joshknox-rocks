@@ -6,11 +6,16 @@ body {
 
 }
 
-img {
+.projects img {
     max-width: 100%;
     border: 1px solid black;
 }
 
+@media (orientation: portrait) {
+    .projects img {
+        display: none;
+    }
+}
 header {
     background: violet;
     color: white;
@@ -22,30 +27,30 @@ header {
     justify-content: center;
 }
 
-main {
+.avatar {
+    border-radius: 100%;    
+}
+
+.projects {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
     padding: 25px;
     justify-content: center;
 }
-
-a {
-    width: 100%;
-    box-shadow: 0 0 3px 3px gray;
-    padding: 25px;
-}
-
-@media (min-width: 480px) {
-    a {
+@media (orientation: landscape) {
+    .projects a {
         width: 250px;
-    }   
+        box-shadow: 0 0 3px 3px gray;
+        padding: 25px;
+    }
+    a:hover {
+        background-color: violet;
+        color: black;
+    }
 }
 
-a:hover {
-    background-color: violet;
-    color: black;
-}
+
 
 .container {
     display: flex;
@@ -60,6 +65,35 @@ a:hover {
     }
 }
 
+
+.intro {
+    display: flex;
+}
+
+@media (orientation: portrait) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .intro img {
+        max-width: 50%;
+    }
+}
+
+@media (orientation: landscape) {
+    .intro {
+        padding: 20px 10%;
+        gap: 5%;
+        align-items: center;
+    }
+
+    .intro img {
+        max-width: 20vw;
+        height: auto;
+    }
+}
 
 .item {
     width: 100%;
@@ -86,47 +120,12 @@ a:hover {
     transform: scale(2)
 }
 
-.c {
-    background-color: rgb(219, 155, 216);
-    background-image: url('images/c.png');
-    color: tan;
-}
-
-.o {
-    background-color: rgb(224, 97, 150); 
-    background-image: url('images/o.png');
-    color: tan;
-}
-
-@media (orientation: portrait) {
-    .o {
-        background-position: center 30%;
-    }
-}
-
-.d { 
-    background-color: rgb(106, 106, 253); 
-    background-image: url('images/d.png');
-    background-position-x: 75%;
-    background-position-y: 50%;
-    color: tan;
-}
-
-.e {
-    background-color: rgb(0, 217, 255);
-    background-image: url('images/e.png');
-    color: tan; 
-}
-
-@media (orientation: portrait) {
-    .e {
-        background-position: center 20%;
-    }
-
-}
 .project-link {
     font-size: 30px
 }
 
-
-    
+@media (orientation: portrait) {
+    h2 {
+        text-align: center
+    }
+}
