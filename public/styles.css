@@ -70,6 +70,10 @@ header {
     display: flex;
 }
 
+.intro img {
+    aspect-ratio: 1;
+}
+
 @media (orientation: portrait) {
     .intro {
         flex-direction: column;
