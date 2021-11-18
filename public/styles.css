@@ -70,10 +70,6 @@ header {
     display: flex;
 }
 
-.intro img {
-    aspect-ratio: 1;
-}
-
 @media (orientation: portrait) {
     .intro {
         flex-direction: column;
@@ -82,7 +78,8 @@ header {
     }
 
     .intro img {
-        max-width: 50%;
+        width: 120px;
+        height: 120px;
     }
 }
 
@@ -94,8 +91,8 @@ header {
     }
 
     .intro img {
-        max-width: 20vw;
-        height: auto;
+        width: 20vw;
+        height: 20vw;
     }
 }
 
