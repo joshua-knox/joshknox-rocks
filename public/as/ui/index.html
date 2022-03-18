@@ -5,6 +5,11 @@
         <style>
             body {
                 font-family: sans-serif;
+                margin: 0;
+            }
+            main > section {
+                border-bottom: 1px solid #939393;
+                padding: 40px;
             }
             .feeds {
                 display: grid;
@@ -21,22 +26,28 @@
                 gap: 40px;
             }
             textarea {
-                width: 100%;)
+                width: 100%;
+            }
+            feed-item,
+            actor-summary {
+                background: white;
             }
         </style>
     </head>
     <body>
         <main>
-            <div id="avatar"></div>
-            <h1>Welcome back<span id="greeting-name"></span>.</h1>
             <section>
+                <div id="avatar"></div>
+                <h1>Welcome back<span id="greeting-name"></span>.</h1>
+            </section>
+            <section style="background-color: rgba(255, 0, 0, .125)">
                 <h2>Create a Note</h2>
                 <form method="POST" action="/as/admin/create">
                     <textarea name="content"></textarea>
                     <button>Submit</button>
                 </form>
             </section>
-            <section>
+            <section style="background-color: rgba(50, 100, 150, .125)">
                 <h2>Social Feeds</h2>
                 <div class="feeds">
                     <div class="feed" id="inbox">
@@ -48,11 +59,15 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section style="background-color: rgba(0, 0, 255, .125)">
+                <h2>Following</h2>
+                <div id="following"></div>
+            </section>
+            <section style="background-color: rgba(0, 255, 0, .125)">
                 <h2>Followers</h2>
                 <div id="followers"></div>
             </section>
-            <section>
+            <section style="background-color: rgba(150, 100, 50, .125)">
                 <h2>Follow a User</h2>
                 <form method="POST" action="/as/admin/follow">
                     <input type="text" name="actor">
@@ -106,7 +121,6 @@
                     const avatarElement = window.document.createElement('img');
                     avatarElement.src = localAvatar;
                     avatarElement.width = 80;
-                    avatarElement.style.setProperty('float', 'left');
                     window.document.querySelector('#avatar').append(avatarElement);
                 }
                 
@@ -152,6 +166,9 @@
                                     align-items: center;
                                     justify-content: space-between;
                                     width: max-content;
+                                }
+                                feed-item {
+                                    background: #c9c9c9;
                                 }
                             </style>
                             ${this.feedItem?.type === 'Note' ? `
@@ -291,6 +308,17 @@
                         const actorSummaryElement = window.document.createElement('actor-summary');
                         actorSummaryElement.actor = follower;
                         actorSummaryElement.setAttribute('data-actor', follower.id);
+                        containerElement.append(actorSummaryElement);
+                    }
+                }
+                
+                {
+                    const containerElement = window.document.querySelector('#following');
+                    
+                    for (const followee of following) {
+                        const actorSummaryElement = window.document.createElement('actor-summary');
+                        actorSummaryElement.actor = followee;
+                        actorSummaryElement.setAttribute('data-actor', followee.id);
                         containerElement.append(actorSummaryElement);
                     }
                 }
