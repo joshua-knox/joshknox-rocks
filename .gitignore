@@ -1,4 +1,6 @@
 package-lock.json
+functions/private-key.js
+functions/firebase-config.js
 
 # Logs
 logs

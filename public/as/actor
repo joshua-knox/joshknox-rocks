@@ -1,0 +1,34 @@
+{
+	"@context": [
+		"https://www.w3.org/ns/activitystreams",
+		"https://w3id.org/security/v1",
+		{
+		  "toot": "http://joinmastodon.org/ns#",
+		  "discoverable": "toot:discoverable"
+		}
+	],
+	"id": "https://joshknox.rocks/as/actor",
+	"type": "Person",
+	"preferredUsername": "josh",
+    "name": "Josh Knox",
+	"summary": "Digital Producer",
+	"url": "https://joshknox.rocks",
+	"icon": {
+		"url": "https://joshknox.rocks/images/avatar.jpg",
+		"mediaType": "image/jpg",
+		"name": "Avatar",
+		"width": 300,
+		"height": 300
+	},
+	"inbox": "https://joshknox.rocks/as/inbox",
+	"outbox": "https://joshknox.rocks/as/outbox",
+	"followers": "https://joshknox.rocks/as/followers",
+	"following": "https://joshknox.rocks/as/following",
+	"likes": "https://joshknox.rocks/as/likes",
+	"discoverable": true,
+	"publicKey": {
+		"id": "https://joshknox.rocks/as/actor#main-key",
+		"owner": "https://joshknox.rocks/as/actor",
+		"publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApMfpX9Wy4Za0++Y4JIr7\nKwhbNgKsOmrPHqxB1Kkht+wQi//Z1uycPy8RrUk9MHseswndVDCVn9ot3Fj2yFa5\nWBxFAaS62ecvnNoz1nGDF7ja3/Mufux2hnSZNhSF7YH4U7I4WcLt7K3gbbXAbpOY\nJLsreOFDtnIFnmwhaDn61/WgR5UXuoaWCKPFbxklsUlGx/s3UGoFj9/VtsYdFp+7\nQyhz7rXFMX1zHd5Kbb/8VnblH/KxaJXWf5pkzl4oJvijyvJltqFeLlpt+mAaizHd\ncHIdCUry1JPHlaVPR/8fWAnclr4p6xclxBeo0PcqaSR0AKC9aVS6cXf9jHFJeUxa\nGQIDAQAB\n-----END PUBLIC KEY-----"
+	}
+}

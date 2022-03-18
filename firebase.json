@@ -5,6 +5,56 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "rewrites": [{
+      "source": "as/inbox",
+      "function": "as"
+    },{
+      "source": "as/outbox",
+      "function": "as"
+    }, {
+      "source": "as/followers",
+      "function": "as"
+    }, {
+      "source": "as/following",
+      "function": "as"
+    }, {
+      "source": "as/likes",
+      "function": "as"
+    }, {
+      "source": "as/admin/like",
+      "function": "as"
+    }, {
+      "source": "as/admin/create",
+      "function": "as"
+    }, {
+      "source": "as/admin/delete",
+      "function": "as"
+    }, {
+      "source": "/as/admin/message",
+      "function": "as"
+    }, {
+      "source": "/as/admin/messages",
+      "function": "as"
+    }, {
+      "source": "as/admin/follow",
+      "function": "as"
+    }, {
+      "source": "as/notes/**",
+      "function": "as"
+    }],
+    "headers": [{
+      "source": "public/as/actor",
+      "headers": [{
+        "key": "Content-Type",
+        "value": "application/ld+json; profile=\"https://www.w3.org/ns/activitystreams\""
+      }]
+    }, {
+      "source": "public/.well-known/webfinger",
+      "headers": [{
+        "key": "Content-Type",
+        "value": "application/json"
+      }]
+    }]
   }
 }
