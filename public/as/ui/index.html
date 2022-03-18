@@ -3,12 +3,17 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+            * {
+                box-sizing: border-box;
+            }
             body {
                 font-family: sans-serif;
                 margin: 0;
+                background: black;
+                color: white;
             }
             main > section {
-                border-bottom: 1px solid #939393;
+                border-bottom: 1px solid black;
                 padding: 40px;
             }
             .feeds {
@@ -23,26 +28,30 @@
             .feed {
                 display: flex;
                 flex-direction: column;
-                gap: 40px;
+                gap: 20px;
+                background-color: #393939;
+                padding: 20px;
+                border-radius: 12px;
             }
+            input[type="text"],
             textarea {
+                padding: 10px;
+                font: inherit;
+                border: 0;
                 width: 100%;
                 background: white;
-            }
-            feed-item,
-            actor-summary {
-                background: white;
+                color: black;
             }
         </style>
     </head>
     <body>
         <main>
-            <section>
+            <section style="text-align: center">
                 <div id="avatar"></div>
                 <h1>Welcome back<span id="greeting-name"></span>.</h1>
             </section>
             <section style="background-color: rgba(255, 0, 0, .125)">
-                <h2>Create a Note</h2>
+                <h2>What's on your mind?</h2>
                 <form method="POST" action="/as/admin/create">
                     <textarea name="content"></textarea>
                     <button>Submit</button>
@@ -62,11 +71,11 @@
             </section>
             <section style="background-color: rgba(0, 0, 255, .125)">
                 <h2>Following</h2>
-                <div id="following"></div>
+                <div class="feed" id="following"></div>
             </section>
             <section style="background-color: rgba(0, 255, 0, .125)">
                 <h2>Followers</h2>
-                <div id="followers"></div>
+                <div class="feed" id="followers"></div>
             </section>
             <section style="background-color: rgba(150, 100, 50, .125)">
                 <h2>Follow a User</h2>
@@ -121,6 +130,7 @@
                 if (localAvatar) {
                     const avatarElement = window.document.createElement('img');
                     avatarElement.src = localAvatar;
+                    avatarElement.style.setProperty('border-radius', '100%');
                     avatarElement.width = 80;
                     window.document.querySelector('#avatar').append(avatarElement);
                 }
@@ -154,13 +164,20 @@
                         
                         rootDivElement.innerHTML = `
                             <style>
-                                .feed-item {
+                                * {
+                                    box-sizing: border-box;
+                                }
+                                :host {
+                                    display: flex;
+                                    background: white;
+                                    color: black;
                                     border: 1px solid black;
                                     border-radius: 8px;
-                                    padding: 12px;
-                                }
-                                .feed-item--Tombstone {
-                                    display: none;
+                                    padding: 20px;
+                                    flex-direction: column;
+                                    width: 100%;
+                                    flex: 0 1 auto;
+                                    overflow: hidden;
                                 }
                                 .columns-space-between {
                                     display: flex;
@@ -170,6 +187,9 @@
                                 }
                                 feed-item {
                                     background: #c9c9c9;
+                                }
+                                [data-embed] {
+                                    display: flex;
                                 }
                             </style>
                             ${this.feedItem?.type === 'Note' ? `
@@ -235,10 +255,20 @@
                         const avatar = typeof this.actor?.icon === 'string' ? this.actor.icon : this.actor?.icon?.url;
                         rootDivElement.innerHTML = `
                             <style>
-                                .actor-summary {
+                                * {
+                                    box-sizing: border-box;
+                                }
+                                :host {
+                                    display: flex;
+                                    background: white;
+                                    color: black;
                                     border: 1px solid black;
                                     border-radius: 8px;
-                                    padding: 12px;
+                                    padding: 20px;
+                                    flex-direction: column;
+                                    width: 100%;
+                                    flex: 0 1 auto;
+                                    overflow: hidden;
                                 }
                                 textarea {
                                     width: 100%;
@@ -255,7 +285,7 @@
                                 ${avatar ? `<img width="60" style="margin-right: 10px; margin-bottom: 10px; border-radius: 100%;" src="${avatar}">` : ''}
                                 <h3>${this.actor?.preferredUsername}</h3>
                             </div>
-                            <details>
+                            <details open>
                                 <summary>Message</summary>
                                 <form method="POST" action="/as/admin/message">
                                     <input type="hidden" name="to" value="${this.actor?.id}">
