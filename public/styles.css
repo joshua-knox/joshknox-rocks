@@ -105,6 +105,7 @@ p {
 section {
   break-after: column;
   break-before: column;
+  break-inside: avoid;
   display: grid;
   gap: 24px;
 }
