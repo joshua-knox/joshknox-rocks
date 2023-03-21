@@ -80,10 +80,16 @@ main {
     gap: 24px;
     width: 100%;
     display: grid;
-    max-width: calc(100% - 20px);
 }
 
 @media (max-width: 479px) {
+  nav,
+  header,
+  aside,
+  main {
+    max-width: calc(100% - 20px);
+  }
+
   header {
     gap: 0;
     justify-content: center;
