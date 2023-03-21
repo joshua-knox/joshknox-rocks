@@ -80,6 +80,23 @@ main {
     gap: 24px;
     width: 100%;
     display: grid;
+    max-width: calc(100% - 20px);
+}
+
+@media (max-width: 479px) {
+  header {
+    gap: 0;
+    justify-content: center;
+    grid-auto-flow: row;
+  }
+
+  header img {
+    margin: 0 auto;
+  }
+
+  header h1 {
+    text-align: center;
+  }
 }
 
 p {
