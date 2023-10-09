@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Josh Knox - UX/UI Designer - Louisville, KY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/components/column.css" />
+    <link rel="stylesheet" href="/components/multi-column.css" />
+  </head>
+  <body>
+    <header>
+      <span class="h2-headline">
+        <a class="h2-headline__name" href="/">
+          Josh Knox, UX Designer
+        </a>
+      </span>
+    </header>
+    <main>
+      <x-column>
+        <template shadowroot="open" shadowrootmode="open">
+          <link rel="stylesheet" href="/components/column.css" />
+          <h1>
+            <slot name="heading"></slot>
+          </h1>
+          <slot></slot>
+        </template>
+        <span slot="heading">
+          Catastic
+        </span>
+      </x-column>
+
+      <x-multi-column>
+        <template shadowroot="open" shadowrootmode="open">
+          <link rel="stylesheet" href="/components/multi-column.css" />
+          <slot></slot>
+        </template>
+        <x-column>
+          <template shadowroot="open" shadowrootmode="open">
+            <link rel="stylesheet" href="/components/column.css" />
+            <h2>
+              <slot name="heading"></slot>
+            </h2>
+            <slot></slot>
+          </template>
+          <span slot="heading">
+            Overview
+          </span>
+          <p>
+            I designed the intro flow for a social media app called Catastic.
+          </p>
+          <p>
+            The app is for sharing cat photos with other cat lovers.
+          </p>
+          <p>
+            I wanted to focus on speed to sign up and making the process delightful.
+          </p>
+        </x-column>
+        <x-column-image>
+          <template shadowroot="open" shadowrootmode="open">
+            <link rel="stylesheet" href="/components/column-image.css" />
+            <slot></slot>
+          </template>
+          <img alt="The start screen of the app" src="catastic-frame-1.png" />
+        </x-column-image>
+      </x-multi-column>
+      
+
+      <x-multi-column columns="3">
+        <template shadowroot="open" shadowrootmode="open">
+          <link rel="stylesheet" href="/components/multi-column.css" />
+          <slot></slot>
+        </template>
+        <x-column-image>
+          <template shadowroot="open" shadowrootmode="open">
+            <link rel="stylesheet" href="/components/column-image.css" />
+            <slot></slot>
+          </template>
+          <img alt="The start of the flow in the app" src="catastic-frame-2.png" />
+        </x-column-image>
+        <x-column-image>
+          <template shadowroot="open" shadowrootmode="open">
+            <link rel="stylesheet" href="/components/column-image.css" />
+            <slot></slot>
+          </template>
+          <img alt="The waiting screen in the app" src="catastic-frame-3.png" />
+        </x-column-image>
+        <x-column-image>
+          <template shadowroot="open" shadowrootmode="open">
+            <link rel="stylesheet" href="/components/column-image.css" />
+            <slot></slot>
+          </template>
+          <img alt="The results page in the app" src="catastic-frame-4.png" />
+        </x-column-image>
+        <x-column-image>
+          <template shadowroot="open" shadowrootmode="open">
+            <link rel="stylesheet" href="/components/column-image.css" />
+            <slot></slot>
+          </template>
+          <img alt="The results page in the app" src="catastic-frame-5.png" />
+        </x-column-image>
+        <x-column-image>
+          <template shadowroot="open" shadowrootmode="open">
+            <link rel="stylesheet" href="/components/column-image.css" />
+            <slot></slot>
+          </template>
+          <img alt="The results page in the app" src="catastic-frame-6.png" />
+        </x-column-image>
+    </main>
+    <script type="module" src="/declarative-shadow-dom-polyfill.js"></script>
+    <script type="module" src="/components/column.js"></script>
+    <script type="module" src="/components/multi-column.js"></script>
+  </body>
+</html>

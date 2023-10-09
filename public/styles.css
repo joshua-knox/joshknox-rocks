@@ -45,6 +45,10 @@ header img {
   font-size: 1.875em;
 }
 
+.h2-headline__name {
+  color: white;
+}
+
 .h1-headline__title {
   font-size: .875em;
   font-weight: normal;
@@ -74,7 +78,7 @@ nav,
 header,
 aside,
 main {
-    max-width: 960px;
+    max-width: 840px;
     margin: 0 auto;
     padding: 24px;
     gap: 24px;
@@ -82,7 +86,7 @@ main {
     display: grid;
 }
 
-@media (max-width: 959px) {
+@media (max-width: 839px) {
   nav,
   header,
   aside,

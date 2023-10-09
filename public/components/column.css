@@ -1,0 +1,16 @@
+:host {
+  break-after: column;
+  break-before: column;
+  break-inside: avoid;
+  display: grid;
+  width: 100%;
+  gap: 24px;
+  grid-template-columns: 100%;
+  place-content: flex-start;
+}
+
+h1,
+:host([heading-level="1"]) h2 {
+  font-size: 56px;
+  text-align: center;
+}

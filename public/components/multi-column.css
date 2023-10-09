@@ -1,0 +1,14 @@
+:host {
+  display: grid;
+  gap: 48px;
+}
+
+@media (min-width: 960px) {
+  :host {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  :host([columns="3"]) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,12 @@
+:host {
+  break-after: column;
+  break-before: column;
+  break-inside: avoid;
+  display: grid;
+  place-content: center;
+  padding: 24px;
+}
+
+slot::slotted(img) {
+  max-width: 100%;
+}
