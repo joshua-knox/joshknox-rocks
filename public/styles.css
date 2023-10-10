@@ -172,7 +172,13 @@ body:not(.is-loaded) * {
 }
 
 .cards > li {
-  flex: 1 1 calc((840px - 80px) / 2);
+  flex: 0 0 calc((840px - 80px) / 2);
+}
+
+@media (max-width: 840px) {
+  .cards > li {
+    flex: 1 1 calc((840px - 80px) / 2);
+  }
 }
 
 .card {
