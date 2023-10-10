@@ -161,3 +161,49 @@ iframe {
 body:not(.is-loaded) * {
   display: none;
 }
+
+.cards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cards > li {
+  flex: 1 1 calc((840px - 80px) / 2);
+}
+
+.card {
+  display: grid;
+  list-style: none;
+  aspect-ratio: 1;
+  grid-template-rows: auto minmax(0, 1fr);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.card img {
+  max-height: 100%;
+}
+
+.card-content {
+  padding: 24px;
+  background: navy;
+  color: white;
+}
+
+.card img {
+  display: grid;
+}
+
+.card-content a {
+  color: white;
+}
+
+.card:hover {
+  box-shadow: 0 0 6px 6px rgba(0, 0, 0, .333);
+  position: relative;
+  z-index: 1;
+}
