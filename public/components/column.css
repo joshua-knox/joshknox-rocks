@@ -10,7 +10,7 @@
 }
 
 h1,
-:host([heading-level="1"]) h2 {
+:host([heading-level="1"]) ::slotted(h2) {
   font-size: 56px;
   text-align: center;
 }

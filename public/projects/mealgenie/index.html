@@ -20,35 +20,15 @@
       </span>
     </header>
     <main>
-      <x-column>
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/column.css" />
-          <h1>
-            <slot name="heading"></slot>
-          </h1>
-          <slot></slot>
-        </template>
-        <span slot="heading">
-          MealGenie
-        </span>
-      </x-column>
+      <h1>
+        MealGenie
+      </h1>
 
       <x-multi-column>
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/multi-column.css" />
-          <slot></slot>
-        </template>
         <x-column>
-          <template shadowroot="open" shadowrootmode="open">
-            <link rel="stylesheet" href="/components/column.css" />
-            <h2>
-              <slot name="heading"></slot>
-            </h2>
-            <slot></slot>
-          </template>
-          <span slot="heading">
+          <h2>
             Overview
-          </span>
+          </h2>
           <p>
             I designed an AI-powered app called <strong>MealGenie</strong>
             that provides an easy and convenient way to plan and prepare meals and
@@ -72,25 +52,14 @@
           </p>
         </x-column>
         <x-column-image>
-          <template shadowroot="open" shadowrootmode="open">
-            <link rel="stylesheet" href="/components/column-image.css" />
-            <slot></slot>
-          </template>
           <img alt="The start screen of the app" src="mealgenie-frame-1.png" />
         </x-column-image>
       </x-multi-column>
       
       <x-column>
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/column.css" />
-          <h2>
-            <slot name="heading"></slot>
-          </h2>
-          <slot></slot>
-        </template>
-        <span slot="heading">
+        <h2>
           User Research & Personas
-        </span>
+        </h2>
         <p>
           My user research included surveys and interviews.
           I received over 100 responses in total from a survey that I posted
@@ -120,28 +89,13 @@
       </x-column>
 
       <x-multi-column>
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/multi-column.css" />
-          <slot></slot>
-        </template>
         <x-column-image>
-          <template shadowroot="open" shadowrootmode="open">
-            <link rel="stylesheet" href="/components/column-image.css" />
-            <slot></slot>
-          </template>
           <img alt="Persona: Betty" src="persona-betty.png" />
         </x-column-image>
         <x-column>
-          <template shadowroot="open" shadowrootmode="open">
-            <link rel="stylesheet" href="/components/column.css" />
-            <h3>
-              <slot name="heading"></slot>
-            </h3>
-            <slot></slot>
-          </template>
-          <span slot="heading">
+          <h3>
             Betty
-          </span>
+          </h3>
           <p>
             <strong>Betty</strong>, the <strong>Busy Parent</strong>, needs a
             quick and painless way to plan meals for the week.
@@ -153,28 +107,13 @@
       </x-multi-column>
       
       <x-multi-column>
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/multi-column.css" />
-          <slot></slot>
-        </template>
         <x-column-image>
-          <template shadowroot="open" shadowrootmode="open">
-            <link rel="stylesheet" href="/components/column-image.css" />
-            <slot></slot>
-          </template>
           <img alt="Persona: Jango" src="persona-jango.png" />
         </x-column-image>
         <x-column>
-          <template shadowroot="open" shadowrootmode="open">
-            <link rel="stylesheet" href="/components/column.css" />
-            <h3>
-              <slot name="heading"></slot>
-            </h3>
-            <slot></slot>
-          </template>
-          <span slot="heading">
+          <h3>
             Jango
-          </span>
+          </h3>
           <p>
             <strong>Jango</strong>, the <strong>Fitness Guru</strong>,
             has specific dietary needs to achieve his his goals.
@@ -186,28 +125,13 @@
       </x-multi-column>
       
       <x-multi-column>
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/multi-column.css" />
-          <slot></slot>
-        </template>
         <x-column-image>
-          <template shadowroot="open" shadowrootmode="open">
-            <link rel="stylesheet" href="/components/column-image.css" />
-            <slot></slot>
-          </template>
           <img alt="Persona: Maria" src="persona-maria.png" />
         </x-column-image>
         <x-column>
-          <template shadowroot="open" shadowrootmode="open">
-            <link rel="stylesheet" href="/components/column.css" />
-            <h3>
-              <slot name="heading"></slot>
-            </h3>
-            <slot></slot>
-          </template>
-          <span slot="heading">
+          <h3>
             Maria
-          </span>
+          </h3>
           <p>
             <strong>Maria</strong>, the <strong>Parent of a Child with a Food Allergy</strong>,
             needs nutrition information and ingredients listed front and center.
@@ -220,16 +144,9 @@
       </x-multi-column>
 
       <x-column>
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/column.css" />
-          <h2>
-            <slot name="heading"></slot>
-          </h2>
-          <slot></slot>
-        </template>
-        <span slot="heading">
+        <h2>
           Insight: Money/budgeting is less of a factor than expected
-        </span>
+        </h2>
         <ul>
           <li>
             Survey results showed only 10% of respondents said they were on a tight 
@@ -250,16 +167,9 @@
       </x-column>
       
       <x-column>
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/column.css" />
-          <h2>
-            <slot name="heading"></slot>
-          </h2>
-          <slot></slot>
-        </template>
-        <span slot="heading">
+        <h2>
           Insight: Some people use multiple apps to plan meals
-        </span>
+        </h2>
         <ul>
           <li>
             Some survey respondents entered several apps that they currently use
@@ -272,16 +182,9 @@
 
       
       <x-column>
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/column.css" />
-          <h2>
-            <slot name="heading"></slot>
-          </h2>
-          <slot></slot>
-        </template>
-        <span slot="heading">
+        <h2>
           Insight: Many people are looking for a better search UX
-        </span>
+        </h2>
         <ul>
           <li>
             Survey respondents reported wanting more recipe variety and more 
@@ -295,16 +198,9 @@
       </x-column>
       
       <x-column>
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/column.css" />
-          <h2>
-            <slot name="heading"></slot>
-          </h2>
-          <slot></slot>
-        </template>
-        <span slot="heading">
+        <h2>
           Hypothesis: Could AI help people get more personalized meal plans?
-        </span>
+        </h2>
         <ul>
           <li>
             Users are looking for more customization options
@@ -317,16 +213,9 @@
       </x-column>
 
       <x-column>
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/column.css" />
-          <h2>
-            <slot name="heading"></slot>
-          </h2>
-          <slot></slot>
-        </template>
-        <span slot="heading">
+        <h2>
           Design & Usability Testing
-        </span>
+        </h2>
         <p>
           I focused on a simple interface that utilized Tabs with Swipable Buttons
           and also provided a Text Search Box for adding custom items to the users'
@@ -352,51 +241,35 @@
       </x-column>
 
       <x-multi-column columns="3">
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/multi-column.css" />
-          <slot></slot>
-        </template>
         <x-column-image>
-          <template shadowroot="open" shadowrootmode="open">
-            <link rel="stylesheet" href="/components/column-image.css" />
-            <slot></slot>
-          </template>
           <img alt="The start of the flow in the app" src="mealgenie-frame-2.png" />
         </x-column-image>
         <x-column-image>
-          <template shadowroot="open" shadowrootmode="open">
-            <link rel="stylesheet" href="/components/column-image.css" />
-            <slot></slot>
-          </template>
           <img alt="The waiting screen in the app" src="mealgenie-frame-4.png" />
         </x-column-image>
         <x-column-image>
-          <template shadowroot="open" shadowrootmode="open">
-            <link rel="stylesheet" href="/components/column-image.css" />
-            <slot></slot>
-          </template>
           <img alt="The results page in the app" src="mealgenie-frame-5.png" />
         </x-column-image>
       </x-multi-column>
-      
+      <br /><br />
       <x-column heading-level="1">
-        <template shadowroot="open" shadowrootmode="open">
-          <link rel="stylesheet" href="/components/column.css" />
-          <h2>
-            <slot name="heading"></slot>
-          </h2>
-          <slot></slot>
-        </template>
-        <span slot="heading">
+        <h2>
           Give it a try
-        </span>
-        <div style="text-align: center; margin-bottom: 2em;">
+        </h2>
+        <div style="font-size: 1.5em; text-align: center; margin-bottom: 2em;">
           <a target="_blank" href="https://socialweb.id">Try MealGenie!</a>
         </div>
       </x-column>
     </main>
-    <script type="module" src="/declarative-shadow-dom-polyfill.js"></script>
-    <script type="module" src="/components/column.js"></script>
-    <script type="module" src="/components/multi-column.js"></script>
+    
+    <footer>
+      <span class="h2-headline">
+        <a class="h2-headline__name" href="/">
+          Josh Knox, UX Designer
+        </a>
+      </span>
+    </footer>
+
+    <script type="module" src="/projects.js"></script>
   </body>
 </html>

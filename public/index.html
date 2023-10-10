@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 
-<body>
+<body class="is-loaded">
   <header>
     <img src="/avatar.jpg" alt="Avatar of Josh Knox" />
     <h1 class="h1-headline">
@@ -25,7 +25,7 @@
   
   <main>
     <div class="multi-column">
-      <section role="region" aria-labelledby="h2--summary">
+      <section class="column" role="region" aria-labelledby="h2--summary">
         <h2 id="h2--summary">
           <span>
             Currently available for hire.
@@ -38,7 +38,51 @@
           I have a passion for user experience and accessibility, with a background in business and marketing management.
         </p>
       </section>
-      <section role="region" aria-labelledby="h2--skills">
+      <section class="column" role="region" aria-labelledby="h2--contact">
+        <h2 id="h2--education">
+          <span>Contact</span>
+        </h2>
+        <ul>
+          <li>
+            <a href="https://linkedin.com/in/josh-knox-rocks" target="_blank">Add me on LinkedIn</a>
+          </li>
+          <li>
+            <a href="mailto:jknox0610@gmail.com" target="_blank">Email me</a>
+          </li>
+          <li>
+            <a href="/josh-knox-resume.pdf" target="_blank">Download my resume</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="multi-column">
+      <section class="column" role="region" aria-labelledby="h2--education">
+        <h2 id="h2--education">
+          <span>Education</span>
+        </h2>
+        <h3>
+          <a href="https://codelouisville.org" target="_blank">
+            Code Louisville
+          </a>
+          <span class="dates">
+            (2020-2023)
+          </span>
+        </h3>
+        <ul>
+          <li>
+            I gained an understanding of the principles and best practices of digital design.
+          </li>
+          <li>
+            I learned to work with industry-standard design tools and technologies such as Figma.
+          </li>
+          <li>
+            I developed case studies inspired by real-world apps and websites with peers and mentors.
+          </li>
+        </ul>
+      </section>
+      
+      <section class="column" role="region" aria-labelledby="h2--skills">
         <h2 id="h2--skills">
           <span>
             Skills
@@ -64,64 +108,31 @@
         </ul>
       </section>
     </div>
-
-    <div class="multi-column">
-      <section role="region" aria-labelledby="h2--education">
-        <h2 id="h2--education">
-          <span>Education</span>
-        </h2>
-        <h3>
-          <a href="https://codelouisville.org" target="_blank">
-            Code Louisville
-          </a>
-          <span class="dates">
-            (2020-2023)
-          </span>
-        </h3>
-        <ul>
-          <li>
-            I gained an understanding of the principles and best practices of digital design.
-          </li>
-          <li>
-            I learned to work with industry-standard design tools and technologies such as Figma.
-          </li>
-          <li>
-            I developed case studies inspired by real-world apps and websites with peers and mentors.
-          </li>
-        </ul>
-      </section>
-      <section role="region" aria-labelledby="h2--contact">
-        <h2 id="h2--education">
-          <span>Contact</span>
-        </h2>
-        <ul>
-          <li>
-            <a href="https://linkedin.com/in/josh-knox-rocks" target="_blank">Add me on LinkedIn</a>
-          </li>
-          <li>
-            <a href="mailto:jknox0610@gmail.com" target="_blank">Email me</a>
-          </li>
-          <li>
-            <a href="/josh-knox-resume.pdf" target="_blank">Download my resume</a>
-          </li>
-        </ul>
-      </section>
-    </div>
     
-    <section role="region" aria-labelledby="h2--projects">
+    <section class="column" role="region" aria-labelledby="h2--projects">
       <h2 id="h2--projects">
         <span>Projects</span>
       </h2>
       <ul>
         <li>
-          <a href="/projects/mealgenie">
-            Meal Genie - AI case study
-          </a>
+          <h3>
+            <a href="/projects/mealgenie">
+              Meal Genie
+            </a>
+          </h3>
+          <p>
+            An AI case study.
+          </p>
         </li>
         <li>
-          <a href="/projects/catastic">
-            Catastic - Social media intro flow
-          </a>
+          <h3>
+            <a href="/projects/catastic">
+              Catastic
+            </a>
+          </h3>
+          <p>
+            Social media app onboarding flow.
+          </p>
         </li>
       </ul>
     </section>

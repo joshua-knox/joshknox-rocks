@@ -1,14 +1,21 @@
-class ColumnElement extends HTMLElement {
-  constructor() {
-    super();
-    const h1Element = this.shadowRoot.querySelector('slot[name="heading"]')?.assignedNodes()?.[0];
+import {LitElement, html} from '/lit.all.min.js';
 
-    if (h1Element && 'attachInternals' in this) {
-      this.internals_ = this.attachInternals();
-      this.internals_.role = 'region';
-      this.internals_.ariaLabel = h1Element.textContent;
+export default async () => {
+  const rawStyles = await fetch('/components/column.css').then((res) => res.text());
+  const styles = new CSSStyleSheet();
+  styles.replaceSync(rawStyles);
+
+  class ColumnElement extends LitElement {
+    static styles = [
+      styles,
+    ];
+
+    render() {
+      return html`
+        <slot></slot>
+      `;
     }
   }
-}
 
-window.customElements.define('x-column', ColumnElement);
+  window.customElements.define('x-column', ColumnElement);
+};
