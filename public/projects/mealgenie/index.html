@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MealGenie - Josh Knox - UX/UI Designer - Louisville, KY</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/components/column.css" />
     <link rel="stylesheet" href="/components/multi-column.css" />
+    <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
     <header>
       <span class="h2-headline">
-        <a class="h2-headline__name" href="/">
-          Josh Knox, UX Designer
-        </a>
+        <a class="h2-headline__name" href="/"> Josh Knox, UX Designer </a>
       </span>
     </header>
     <main>
-      <h1>
-        MealGenie
-      </h1>
+      <h1>MealGenie</h1>
 
       <x-multi-column>
         <x-column>
-          <h2>
-            Overview
-          </h2>
+          <h2>Overview</h2>
           <p>
             I designed an AI-powered app called <strong>MealGenie</strong>
-            that provides an easy and convenient way to plan and prepare meals and
-            discover new recipes.
+            that provides an easy and convenient way to plan and prepare meals
+            and discover new recipes.
           </p>
           <p>
             Meal planning is a big part of my week but I hadn't found a great
@@ -40,10 +38,10 @@
           </p>
           <p>
             I had recently discovered ChatGPT and wanted to experiment with
-            creating an individualized weekly meal plan for myself.
-            I told it my likes, dislikes, and other relevent dietary information
-            and asked for a personalized meal plan, and I was pleasantly
-            surprised with the results.
+            creating an individualized weekly meal plan for myself. I told it my
+            likes, dislikes, and other relevent dietary information and asked
+            for a personalized meal plan, and I was pleasantly surprised with
+            the results.
           </p>
           <p>
             I became interested in designing this app as a way to share this
@@ -55,36 +53,34 @@
           <img src="mealgenie-frame-1.png" />
         </x-column-image>
       </x-multi-column>
-      
+
       <x-column>
-        <h2>
-          User Research & Personas
-        </h2>
+        <h2>User Research & Personas</h2>
         <p>
-          My user research included surveys and interviews.
-          I received over 100 responses in total from a survey that I posted
-          across several subreddits.
+          My user research included surveys and interviews. I received over 100
+          responses in total from a survey that I posted across several
+          subreddits.
         </p>
         <ul>
           <li>
             Respondents were 60 female : 40 male and most were primary cook
           </li>
           <li>
-            Over half reported that they had very little time to plan/shop for meals
+            Over half reported that they had very little time to plan/shop for
+            meals
           </li>
+          <li>Very few said they were on a tight budget</li>
           <li>
-            Very few said they were on a tight budget
-          </li>
-          <li>
-            Wanted more flexibility with recipes (ability to swap/alternate ingredients)
+            Wanted more flexibility with recipes (ability to swap/alternate
+            ingredients)
           </li>
           <li>
             Wanted wider range of recipes and better recipe search features
           </li>
         </ul>
         <p>
-          I was able able to narrow down the potential target markets
-          in the form of three personas:
+          I was able able to narrow down the potential target markets in the
+          form of three personas:
         </p>
       </x-column>
 
@@ -93,83 +89,74 @@
           <img alt="Persona: Betty" src="persona-betty.png" />
         </x-column-image>
         <x-column>
-          <h3>
-            Betty
-          </h3>
+          <h3>Betty</h3>
           <p>
             <strong>Betty</strong>, the <strong>Busy Parent</strong>, needs a
-            quick and painless way to plan meals for the week.
-            She works and is the primary cook for this dual-income household.
-            Grocery budgeting is not a huge concern.
-            She has kids who also need to be happy with the meals.
+            quick and painless way to plan meals for the week. She works and is
+            the primary cook for this dual-income household. Grocery budgeting
+            is not a huge concern. She has kids who also need to be happy with
+            the meals.
           </p>
         </x-column>
       </x-multi-column>
-      
+
       <x-multi-column>
         <x-column-image>
           <img alt="Persona: Jango" src="persona-jango.png" />
         </x-column-image>
         <x-column>
-          <h3>
-            Jango
-          </h3>
+          <h3>Jango</h3>
           <p>
-            <strong>Jango</strong>, the <strong>Fitness Guru</strong>,
-            has specific dietary needs to achieve his his goals.
-            He's tired of eating the same thing all the time, so he's looking for variety.
-            He will need a way to swap out items in a recipe to fit his Paleo diet.
-            He is an individual who cooks only for himself. He is sometimes budget-conscious.
+            <strong>Jango</strong>, the <strong>Fitness Guru</strong>, has
+            specific dietary needs to achieve his his goals. He's tired of
+            eating the same thing all the time, so he's looking for variety. He
+            will need a way to swap out items in a recipe to fit his Paleo diet.
+            He is an individual who cooks only for himself. He is sometimes
+            budget-conscious.
           </p>
         </x-column>
       </x-multi-column>
-      
+
       <x-multi-column>
         <x-column-image>
           <img alt="Persona: Maria" src="persona-maria.png" />
         </x-column-image>
         <x-column>
-          <h3>
-            Maria
-          </h3>
+          <h3>Maria</h3>
           <p>
-            <strong>Maria</strong>, the <strong>Parent of a Child with a Food Allergy</strong>,
-            needs nutrition information and ingredients listed front and center.
-            Her son Alex has an allergy to gluten that she takes very seriously.
-            Even she eats gluten-free stuff most of the time because she's adapted to it.
-            Dinner is a big part of their family experience together with her son.
-            Swapping ingredients is crucial when she goes to look at recipes.
+            <strong>Maria</strong>, the
+            <strong>Parent of a Child with a Food Allergy</strong>, needs
+            nutrition information and ingredients listed front and center. Her
+            son Alex has an allergy to gluten that she takes very seriously.
+            Even she eats gluten-free stuff most of the time because she's
+            adapted to it. Dinner is a big part of their family experience
+            together with her son. Swapping ingredients is crucial when she goes
+            to look at recipes.
           </p>
         </x-column>
       </x-multi-column>
 
       <x-column>
-        <h2>
-          Insight: Money/budgeting is less of a factor than expected
-        </h2>
+        <h2>Insight: Money/budgeting is less of a factor than expected</h2>
         <ul>
           <li>
-            Survey results showed only 10% of respondents said they were on a tight 
-            budget and 30% don't budget at all
+            Survey results showed only 10% of respondents said they were on a
+            tight budget and 30% don't budget at all
           </li>
           <li>
-            Nutrition information (counting Macros) was more important than 
+            Nutrition information (counting Macros) was more important than
             budgeting
           </li>
+          <li>Some focused on fitness</li>
           <li>
-            Some focused on fitness
-          </li>
-          <li>
-            Decided not to focus on people on a budget (not people who want to use items 
-            already in their pantry).
+            Decided not to focus on people on a budget (not people who want to
+            use items already in their pantry).
           </li>
         </ul>
       </x-column>
-      
+
       <x-column>
-        <h2>
-          Insight: Some people use multiple apps to plan meals
-        </h2>
+        <h2>Insight: Some people use multiple apps to plan meals</h2>
         <ul>
           <li>
             Some survey respondents entered several apps that they currently use
@@ -180,72 +167,69 @@
         </ul>
       </x-column>
 
-      
       <x-column>
-        <h2>
-          Insight: Many people are looking for a better search UX
-        </h2>
+        <h2>Insight: Many people are looking for a better search UX</h2>
         <ul>
           <li>
-            Survey respondents reported wanting more recipe variety and more 
+            Survey respondents reported wanting more recipe variety and more
             customization options when searching
           </li>
           <li>
-            Users seemed dissatisfied with their search results and the tools they had 
-            available to find good recipes            
+            Users seemed dissatisfied with their search results and the tools
+            they had available to find good recipes
           </li>
         </ul>
       </x-column>
-      
+
       <x-column>
         <h2>
           Hypothesis: Could AI help people get more personalized meal plans?
         </h2>
         <ul>
+          <li>Users are looking for more customization options</li>
           <li>
-            Users are looking for more customization options
-          </li>
-          <li>
-            Rather of keeping a huge database of possible meal plans, AI could 
+            Rather of keeping a huge database of possible meal plans, AI could
             probably produce more personalized results.
           </li>
         </ul>
       </x-column>
 
       <x-column>
-        <h2>
-          Design & Usability Testing
-        </h2>
+        <h2>Design & Usability Testing</h2>
         <p>
-          I focused on a simple interface that utilized Tabs with Swipable Buttons
-          and also provided a Text Search Box for adding custom items to the users'
-          likes, dislikes, etc.
+          I focused on a simple interface that utilized Tabs with Swipable
+          Buttons and also provided a Text Search Box for adding custom items to
+          the users' likes, dislikes, etc.
         </p>
         <p>
           There is a delay while the results are generated, so I added a fun
           animation to keep the user engaged.
         </p>
         <ul>
-          <li>
-            Used maze.co for usability testing, with 20 paid testers
-          </li>
+          <li>Used maze.co for usability testing, with 20 paid testers</li>
           <li>
             Of those that reached the end, 4/5 stars was the average rating
           </li>
           <li>
-            Most testers were excited and delighted that it worked at all:
-            "I was pleasantly surprised with the results I was given and how easy it
-            seemed to generate a meal plan with the requirements I asked."
+            Most testers were excited and delighted that it worked at all: "I
+            was pleasantly surprised with the results I was given and how easy
+            it seemed to generate a meal plan with the requirements I asked."
           </li>
         </ul>
       </x-column>
 
       <x-multi-column columns="3">
         <x-column-image>
-          <img alt="The start of the flow in the app" src="mealgenie-frame-2.png" />
+          <img
+            alt="The start of the flow in the app"
+            src="mealgenie-frame-2.png"
+          />
         </x-column-image>
         <x-column-image>
-          <img alt="The waiting screen in the app" src="mealgenie-frame-4.png" />
+          <img
+            alt="The waiting screen in the app"
+            src="mealgenie-frame-4.png"
+          />
         </x-column-image>
         <x-column-image>
           <img alt="The results page in the app" src="mealgenie-frame-5.png" />
@@ -253,20 +237,16 @@
       </x-multi-column>
       <br /><br />
       <x-column heading-level="1">
-        <h2>
-          Give it a try
-        </h2>
-        <div style="font-size: 1.5em; text-align: center; margin-bottom: 2em;">
+        <h2>Give it a try</h2>
+        <div style="font-size: 1.5em; text-align: center; margin-bottom: 2em">
           <a target="_blank" href="https://socialweb.id">Try MealGenie!</a>
         </div>
       </x-column>
     </main>
-    
+
     <footer>
       <span class="h2-headline">
-        <a class="h2-headline__name" href="/">
-          Josh Knox, UX Designer
-        </a>
+        <a class="h2-headline__name" href="/"> Josh Knox, UX Designer </a>
       </span>
     </footer>
 
