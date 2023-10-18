@@ -1,15 +1,17 @@
 * {
   box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.5;
+  font-size: 120%;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(lightgray, white);
-  background-attachment: fixed;
+  background: #e3e2e2;
   display: grid;
   gap: 24px;
   padding: 24px 0;
