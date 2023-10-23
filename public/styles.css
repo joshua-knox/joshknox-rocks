@@ -29,15 +29,15 @@ header {
   font-size: 24px;
   display: grid;
   grid-auto-flow: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: center;
 }
 
 footer img,
 header img {
-  max-height: 6em;
+  max-height: 8em;
   aspect-ratio: 1;
-  border-radius: 12px;
+  border-radius: 50%;
 }
 
 .h1-headline {
