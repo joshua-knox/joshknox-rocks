@@ -4,17 +4,32 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+@media screen {
+  :root {
+    color-scheme: dark light;
+    --swatch-background: #181818;
+    --swatch-interactive: #2293ff;
+  }
+}
+
+@media screen and (prefers-color-scheme: light) {
+  :root {
+    --swatch-background: #e2e2e3;
+    --swatch-interactive: #086fd2;
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.5;
-  font-size: 120%;
+  font-size: 133%;
   display: flex;
   flex-direction: column;
-  background: #e3e2e2;
   display: grid;
   gap: 24px;
   padding: 24px 0;
+  background: var(--swatch-background);
 }
 
 img {
@@ -23,8 +38,8 @@ img {
 
 footer,
 header {
-  background: conic-gradient(navy, blue);
-  color: white;
+  background: var(--swatch-interactive);
+  color: var(--swatch-background);
   border-radius: 24px;
   font-size: 24px;
   display: grid;
@@ -53,8 +68,12 @@ header img {
   color: white;
 }
 
+a.h2-headline__name {
+  color: var(--swatch-background);
+}
+
 .h1-headline__title {
-  font-size: .875em;
+  font-size: 1em;
   font-weight: normal;
 }
 
@@ -79,12 +98,12 @@ header,
 footer,
 aside,
 main {
-    max-width: 840px;
-    margin: 0 auto;
-    padding: 24px;
-    gap: 24px;
-    width: 100%;
-    display: grid;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 24px;
+  gap: 24px;
+  width: 100%;
+  display: grid;
 }
 
 @media (max-width: 839px) {
@@ -174,7 +193,9 @@ body:not(.is-loaded) * {
 }
 
 .cards > li {
+  display: flex;
   flex: 0 0 calc((840px - 80px) / 2);
+  width: 100%;
 }
 
 @media (max-width: 840px) {
@@ -184,24 +205,28 @@ body:not(.is-loaded) * {
 }
 
 .card {
+  font-weight: normal;
   display: grid;
   list-style: none;
-  aspect-ratio: 1;
   grid-template-rows: auto minmax(0, 1fr);
   border-radius: 24px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  text-decoration: none;
+}
+
+a {
+  font-weight: bold;
+}
+
+a:any-link:not(:visited):not(:active) {
+  color: var(--swatch-interactive);
 }
 
 @media not (pointer: none) {
   .card {
     transition: box-shadow .2s ease-in-out;
-  }
-
-  .card:hover {
-    box-shadow: 0 0 6px 6px rgba(0, 0, 0, .333);
-    z-index: 1;
   }
 
   a {
@@ -219,8 +244,8 @@ body:not(.is-loaded) * {
 
 .card-content {
   padding: 24px;
-  background: navy;
-  color: white;
+  color: var(--swatch-background);
+  background: var(--swatch-interactive);
 }
 
 .card img {
@@ -229,6 +254,10 @@ body:not(.is-loaded) * {
 
 .card-content h3 {
   text-decoration: underline;
+}
+
+.card-content p {
+  text-decoration: none;
 }
 
 @media not (pointer: none) {
