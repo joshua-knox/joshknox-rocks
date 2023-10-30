@@ -9,6 +9,8 @@
     color-scheme: dark light;
     --swatch-background: #181818;
     --swatch-interactive: #2293ff;
+    --clip-path-corner: 2rem;
+    --clip-path: polygon(100% 0, 100% calc(100% - var(--clip-path-corner)), calc(100% - var(--clip-path-corner)) 100%, 0 100%, 0 0);
   }
 }
 
@@ -21,14 +23,12 @@
 
 body {
   margin: 0;
+  padding: 24px 0;
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.5;
   font-size: 125%;
-  display: flex;
-  flex-direction: column;
   display: grid;
   gap: 24px;
-  padding: 24px 0;
   background: var(--swatch-background);
 }
 
@@ -38,29 +38,28 @@ img {
 
 footer,
 header {
-  color: var(--swatch-background);
-  border-radius: 24px;
+  color: Canvas;
+  /* border-radius: 24px; */
   font-size: 24px;
   display: grid;
   grid-auto-flow: column;
   align-items: center;
   justify-content: flex-start;
   border: 2px solid CanvasText;
-  background-image: conic-gradient(deepskyblue, white);
+  background: CanvasText;
+  clip-path: var(--clip-path);
 }
 
-@media screen and (prefers-color-scheme: light) {
-  footer,
-  header {
-    color: CanvasText;
-  }
+footer {
+  margin-bottom: 24px;
 }
 
 footer img,
 header img {
   max-height: 8em;
   aspect-ratio: 1;
-  border-radius: 24px;
+  /* border-radius: 24px; */
+  clip-path: var(--clip-path);
   border: 2px solid CanvasText;
 }
 
@@ -108,22 +107,16 @@ header,
 footer,
 aside,
 main {
-  max-width: 840px;
+  width: min(100% - 48px, 840px);
   margin: 0 auto;
-  padding: 24px;
   gap: 24px;
-  width: 100%;
   display: grid;
 }
 
-@media (max-width: 839px) {
-  nav,
-  header,
-  footer,
-  aside,
-  main {
-    max-width: calc(100% - 20px);
-  }
+header,
+footer,
+main {
+  padding: 24px;
 }
 
 @media (max-width: 479px) {
@@ -204,19 +197,25 @@ body:not(.is-loaded) * {
 
 .cards > li {
   display: flex;
-  flex: 0 0 calc(50% - 24px);
   width: 100%;
+}
+
+@media (min-width: 720px) {
+  .cards > li {
+    flex: 0 0 calc(50% - 24px);
+  }
 }
 
 .card {
   font-weight: normal;
   display: grid;
   border: 2px solid CanvasText;
+  clip-path: var(--clip-path);
   width: 100%;
   flex: 1;
   list-style: none;
   grid-template-rows: auto minmax(0, 1fr);
-  border-radius: 24px;
+  /* border-radius: 24px; */
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
