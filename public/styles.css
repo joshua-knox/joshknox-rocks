@@ -10,7 +10,13 @@
     --swatch-background: #181818;
     --swatch-interactive: #2293ff;
     --clip-path-corner: 2rem;
-    --clip-path: polygon(100% 0, 100% calc(100% - var(--clip-path-corner)), calc(100% - var(--clip-path-corner)) 100%, 0 100%, 0 0);
+    --clip-path: polygon(
+      100% 0,
+      100% calc(100% - var(--clip-path-corner)),
+      calc(100% - var(--clip-path-corner)) 100%,
+      0 100%,
+      0 0
+    );
   }
 }
 
@@ -24,7 +30,7 @@
 body {
   margin: 0;
   padding: 24px 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   line-height: 1.5;
   font-size: 125%;
   display: grid;
@@ -232,11 +238,11 @@ a:any-link:not(:visited):not(:active) {
 
 @media not (pointer: none) {
   .card {
-    transition: box-shadow .2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
   }
 
   a {
-    transition: text-decoration-color .2s;
+    transition: text-decoration-color 0.2s;
   }
 
   a:hover {
@@ -268,7 +274,7 @@ a:any-link:not(:visited):not(:active) {
 
 @media not (pointer: none) {
   .card-content h3 {
-    transition: text-decoration-color .2s;
+    transition: text-decoration-color 0.2s;
   }
 
   .card:hover .card-content h3 {
@@ -278,4 +284,9 @@ a:any-link:not(:visited):not(:active) {
 
 .card-content a {
   color: white;
+}
+
+model-viewer {
+  height: 100%;
+  width: 100%;
 }
