@@ -5,11 +5,12 @@
   "main": "public/behavior.js",
   "scripts": {
     "start": "http-server",
+    "login": "firebase login --reauth",
     "deploy": "firebase deploy"
   },
   "dependencies": {
     "http-server": "latest",
-    "firebase-cli": "latest"
+    "firebase-tools": "^13.18.0"
   },
   "author": "Joshua Knox",
   "license": "MIT"

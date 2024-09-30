@@ -28,13 +28,12 @@
 }
 
 body {
-  margin: 0;
-  padding: 24px 0;
+  margin: 48px;
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.5;
   font-size: 125%;
   display: grid;
-  gap: 24px;
+  gap: 48px;
   background: var(--swatch-background);
 }
 
@@ -42,36 +41,37 @@ img {
   max-width: 100%;
 }
 
-footer,
-header {
+.header {
   color: Canvas;
-  /* border-radius: 24px; */
   font-size: 24px;
-  display: grid;
-  grid-auto-flow: column;
+  max-width: 960px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   border: 2px solid CanvasText;
   background: CanvasText;
   clip-path: var(--clip-path);
+  gap: 24px;
+  padding: 24px 72px;
 }
 
-footer {
-  margin-bottom: 24px;
-}
-
-footer img,
-header img {
+.header img {
+  flex: 0 0 auto;
   max-height: 8em;
   aspect-ratio: 1;
-  /* border-radius: 24px; */
   clip-path: var(--clip-path);
   border: 2px solid CanvasText;
 }
 
 .h1-headline {
+  flex: 0.5 0 0;
   font-size: inherit;
   display: grid;
+  margin: 0;
 }
 
 .h1-headline__name {
@@ -90,6 +90,7 @@ a.h2-headline__name:any-link:not(:visited):not(:active) {
 .h1-headline__title {
   font-size: 1em;
   font-weight: normal;
+  text-wrap: pretty;
 }
 
 h2,
@@ -108,40 +109,12 @@ ul li {
   margin: 0;
 }
 
-nav,
-header,
-footer,
-aside,
 main {
-  width: min(100% - 48px, 840px);
   margin: 0 auto;
-  gap: 24px;
+  width: 100%;
+  gap: 48px;
+  max-width: 960px;
   display: grid;
-}
-
-header,
-footer,
-main {
-  padding: 24px;
-}
-
-@media (max-width: 479px) {
-  footer,
-  header {
-    gap: 0;
-    justify-content: center;
-    grid-auto-flow: row;
-  }
-
-  footer img,
-  header img {
-    margin: 0 auto;
-  }
-
-  footer h1,
-  header h1 {
-    text-align: center;
-  }
 }
 
 p {
@@ -158,14 +131,6 @@ p {
     display: block;
     columns: 2;
   }
-}
-
-.multi-column + .multi-column {
-  margin-top: 24px;
-}
-
-.multi-column + .column {
-  margin-top: 24px;
 }
 
 section,
