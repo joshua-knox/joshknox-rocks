@@ -35,6 +35,10 @@ body {
   display: grid;
   gap: 48px;
   background: var(--swatch-background);
+
+  @media (max-width: 960px) {
+    margin: 24px;
+  }
 }
 
 img {
@@ -52,10 +56,12 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  border: 2px solid CanvasText;
+  text-align: center;
+  border: none;
   background: CanvasText;
   clip-path: var(--clip-path);
-  gap: 24px;
+  row-gap: 0.5em;
+  column-gap: 1em;
   padding: 24px 72px;
 }
 
@@ -72,10 +78,12 @@ img {
   font-size: inherit;
   display: grid;
   margin: 0;
+  gap: 12px;
 }
 
 .h1-headline__name {
   font-size: 1.875em;
+  line-height: 0.875;
 }
 
 .h2-headline__name {
@@ -91,12 +99,17 @@ a.h2-headline__name:any-link:not(:visited):not(:active) {
   font-size: 1em;
   font-weight: normal;
   text-wrap: pretty;
+  line-height: 1.25;
 }
 
 h2,
 h3 {
   margin: 0;
   line-height: 1.1;
+}
+
+h2 {
+  font-weight: normal;
 }
 
 ul {
